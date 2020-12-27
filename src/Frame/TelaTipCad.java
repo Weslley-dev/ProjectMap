@@ -37,7 +37,7 @@ public class TelaTipCad extends javax.swing.JFrame {
         EscCdt.setBackground(new java.awt.Color(255, 255, 255));
         EscCdt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCli.setBackground(new java.awt.Color(255, 204, 51));
+        btnCli.setBackground(new java.awt.Color(255, 229, 77));
         btnCli.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         btnCli.setLabel("Cliente");
         btnCli.addActionListener(new java.awt.event.ActionListener() {
@@ -47,7 +47,7 @@ public class TelaTipCad extends javax.swing.JFrame {
         });
         EscCdt.add(btnCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 210, 50));
 
-        btnEmp.setBackground(new java.awt.Color(255, 204, 51));
+        btnEmp.setBackground(new java.awt.Color(255, 229, 77));
         btnEmp.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         btnEmp.setLabel("Empresa");
         btnEmp.addActionListener(new java.awt.event.ActionListener() {

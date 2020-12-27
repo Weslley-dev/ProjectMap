@@ -38,7 +38,7 @@ public class TelaLogin extends javax.swing.JFrame {
         Bemvindo = new javax.swing.JScrollPane();
         jTextBemvindo = new javax.swing.JTextPane();
         Titulo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        Logo1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -97,8 +97,8 @@ public class TelaLogin extends javax.swing.JFrame {
         Titulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/titulo2.png"))); // NOI18N
         TelaLogin.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, 80));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/carrinho2.jpg"))); // NOI18N
-        TelaLogin.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
+        Logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/carrinho2.jpg"))); // NOI18N
+        TelaLogin.add(Logo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
 
         getContentPane().add(TelaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
@@ -154,12 +154,12 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JScrollPane Bemvindo;
     private javax.swing.JLabel Cadeado;
     private javax.swing.JPanel Login;
+    private javax.swing.JLabel Logo1;
     private javax.swing.JPanel TelaLogin;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Usuario;
     private java.awt.Button btnAcesso1;
     private java.awt.Button btnCadastro;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextPane jTextBemvindo;
     // End of variables declaration//GEN-END:variables
 }

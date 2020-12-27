@@ -118,12 +118,37 @@ public class TelaCadProd extends javax.swing.JFrame {
         btnSalvar.setBackground(new java.awt.Color(255, 229, 77));
         btnSalvar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnSalvar.setLabel("Salvar");
-        jPanel1.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+        jPanel1.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         TabProd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         TabProd.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         TabProd.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -135,7 +160,7 @@ public class TelaCadProd extends javax.swing.JFrame {
         ));
         Tabela.setViewportView(TabProd);
 
-        jPanel1.add(Tabela, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 620, 90));
+        jPanel1.add(Tabela, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 620, 150));
 
         BarraCodigo.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(BarraCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 190, -1));
@@ -148,7 +173,7 @@ public class TelaCadProd extends javax.swing.JFrame {
                 btnExcluirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+        jPanel1.add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, -1, -1));
 
         btnEditar.setBackground(new java.awt.Color(255, 229, 77));
         btnEditar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -158,7 +183,7 @@ public class TelaCadProd extends javax.swing.JFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 60, -1));
+        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 60, -1));
 
         btnNovo.setBackground(new java.awt.Color(255, 229, 77));
         btnNovo.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -168,7 +193,7 @@ public class TelaCadProd extends javax.swing.JFrame {
                 btnNovoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 60, -1));
+        jPanel1.add(btnNovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 60, -1));
 
         Preco.setEditable(false);
         Preco.setBackground(new java.awt.Color(255, 255, 255));

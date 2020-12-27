@@ -28,20 +28,20 @@ public class TelaCadUsu1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        btnAcesso1 = new java.awt.Button();
+        CdtUsu = new javax.swing.JScrollPane();
+        txtCdtUsu = new javax.swing.JTextPane();
+        txtSenhaUsu = new javax.swing.JTextField();
+        txtNomeUsu = new javax.swing.JTextField();
+        txtEmailUsu = new javax.swing.JTextField();
+        txtCPFUsu = new javax.swing.JTextField();
+        txtLoginUsu = new javax.swing.JTextField();
+        BarraNomeUsu = new javax.swing.JTextField();
+        BarraEmailUsu = new javax.swing.JTextField();
+        BarraCPFUsu = new javax.swing.JTextField();
+        BarraLoginUsu = new javax.swing.JTextField();
+        btnCdtUsu = new java.awt.Button();
+        btnVoltarCadUsu = new java.awt.Button();
+        PasswordUsu = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,92 +49,94 @@ public class TelaCadUsu1 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextPane1.setEditable(false);
-        jTextPane1.setBackground(new java.awt.Color(255, 204, 51));
-        jTextPane1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jTextPane1.setText("          Cadastro de úsuario ");
-        jScrollPane1.setViewportView(jTextPane1);
+        txtCdtUsu.setEditable(false);
+        txtCdtUsu.setBackground(new java.awt.Color(255, 229, 77));
+        txtCdtUsu.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        txtCdtUsu.setText("          Cadastro de úsuario ");
+        CdtUsu.setViewportView(txtCdtUsu);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 330, 40));
+        jPanel1.add(CdtUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 330, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/carrinho-de-compras-de-design-xadrez (1).png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
-
-        jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jTextField2.setText("Senha:");
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtSenhaUsu.setEditable(false);
+        txtSenhaUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtSenhaUsu.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtSenhaUsu.setText("Senha:");
+        txtSenhaUsu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        txtSenhaUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtSenhaUsuActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 50, -1));
+        jPanel1.add(txtSenhaUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 50, -1));
 
-        jTextField3.setEditable(false);
-        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jTextField3.setText("Nome:");
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 50, -1));
+        txtNomeUsu.setEditable(false);
+        txtNomeUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtNomeUsu.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtNomeUsu.setText("Nome:");
+        txtNomeUsu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel1.add(txtNomeUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 50, -1));
 
-        jTextField4.setEditable(false);
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jTextField4.setText("E-mail:");
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 50, -1));
+        txtEmailUsu.setEditable(false);
+        txtEmailUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtEmailUsu.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtEmailUsu.setText("E-mail:");
+        txtEmailUsu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel1.add(txtEmailUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 50, -1));
 
-        jTextField5.setEditable(false);
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jTextField5.setText("CPF:");
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        txtCPFUsu.setEditable(false);
+        txtCPFUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtCPFUsu.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtCPFUsu.setText("CPF:");
+        txtCPFUsu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        txtCPFUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                txtCPFUsuActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 50, -1));
+        jPanel1.add(txtCPFUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 50, -1));
 
-        jTextField6.setEditable(false);
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jTextField6.setText("Login:");
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        txtLoginUsu.setEditable(false);
+        txtLoginUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtLoginUsu.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtLoginUsu.setText("Login:");
+        txtLoginUsu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        txtLoginUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                txtLoginUsuActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 50, -1));
+        jPanel1.add(txtLoginUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 50, -1));
 
-        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 190, -1));
+        BarraNomeUsu.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(BarraNomeUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 360, -1));
 
-        jTextField7.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 360, -1));
+        BarraEmailUsu.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(BarraEmailUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 360, -1));
 
-        jTextField8.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 360, -1));
+        BarraCPFUsu.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(BarraCPFUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 250, -1));
 
-        jTextField9.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 250, -1));
+        BarraLoginUsu.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(BarraLoginUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 190, -1));
 
-        jTextField10.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 190, -1));
-
-        btnAcesso1.setActionCommand("Acessar");
-        btnAcesso1.setBackground(new java.awt.Color(255, 204, 51));
-        btnAcesso1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnAcesso1.setLabel("Cadastrar");
-        btnAcesso1.addActionListener(new java.awt.event.ActionListener() {
+        btnCdtUsu.setActionCommand("Acessar");
+        btnCdtUsu.setBackground(new java.awt.Color(255, 229, 77));
+        btnCdtUsu.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnCdtUsu.setLabel("Cadastrar");
+        btnCdtUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAcesso1ActionPerformed(evt);
+                btnCdtUsuActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAcesso1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 110, 40));
+        jPanel1.add(btnCdtUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, 110, 40));
+
+        btnVoltarCadUsu.setBackground(new java.awt.Color(255, 229, 77));
+        btnVoltarCadUsu.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnVoltarCadUsu.setLabel("Voltar");
+        jPanel1.add(btnVoltarCadUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, -1));
+
+        PasswordUsu.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(PasswordUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 190, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
@@ -142,21 +144,21 @@ public class TelaCadUsu1 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtSenhaUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaUsuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtSenhaUsuActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void txtCPFUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCPFUsuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_txtCPFUsuActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void txtLoginUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginUsuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_txtLoginUsuActionPerformed
 
-    private void btnAcesso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcesso1ActionPerformed
+    private void btnCdtUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCdtUsuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAcesso1ActionPerformed
+    }//GEN-LAST:event_btnCdtUsuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,20 +197,20 @@ public class TelaCadUsu1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button btnAcesso1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField BarraCPFUsu;
+    private javax.swing.JTextField BarraEmailUsu;
+    private javax.swing.JTextField BarraLoginUsu;
+    private javax.swing.JTextField BarraNomeUsu;
+    private javax.swing.JScrollPane CdtUsu;
+    private javax.swing.JPasswordField PasswordUsu;
+    private java.awt.Button btnCdtUsu;
+    private java.awt.Button btnVoltarCadUsu;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextField txtCPFUsu;
+    private javax.swing.JTextPane txtCdtUsu;
+    private javax.swing.JTextField txtEmailUsu;
+    private javax.swing.JTextField txtLoginUsu;
+    private javax.swing.JTextField txtNomeUsu;
+    private javax.swing.JTextField txtSenhaUsu;
     // End of variables declaration//GEN-END:variables
 }
