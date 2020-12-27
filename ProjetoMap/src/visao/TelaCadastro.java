@@ -33,9 +33,9 @@ public class TelaCadastro extends javax.swing.JFrame {
         Telefone = new javax.swing.JLabel();
         ComplementoEnd = new javax.swing.JLabel();
         CNPJ = new javax.swing.JLabel();
-        Caixa3 = new javax.swing.JTextField();
+        CPNJText = new javax.swing.JTextField();
         Caixa1End = new javax.swing.JTextField();
-        Nome = new javax.swing.JLabel();
+        LoginEmpresa = new javax.swing.JLabel();
         CepEnd = new javax.swing.JLabel();
         BairroEnd = new javax.swing.JLabel();
         EstadoEnd = new javax.swing.JLabel();
@@ -54,6 +54,12 @@ public class TelaCadastro extends javax.swing.JFrame {
         TituloEmpresa1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         TituloEmpresa = new javax.swing.JLabel();
+        Nome = new javax.swing.JLabel();
+        SenhaEmpresaRep = new javax.swing.JPasswordField();
+        Caixa4 = new javax.swing.JTextField();
+        SenhaDados = new javax.swing.JLabel();
+        SenhaDados1 = new javax.swing.JLabel();
+        SenhaEmpresa = new javax.swing.JPasswordField();
         TelaFundo = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
@@ -68,117 +74,99 @@ public class TelaCadastro extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Caixa2.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa2);
-        Caixa2.setBounds(170, 230, 460, 30);
+        getContentPane().add(Caixa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 280, 30));
 
         TituloEndereco.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         TituloEndereco.setText("Endereço");
-        getContentPane().add(TituloEndereco);
-        TituloEndereco.setBounds(60, 330, 240, 60);
+        getContentPane().add(TituloEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 240, 60));
 
         Telefone.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Telefone.setText("Telefone:");
-        getContentPane().add(Telefone);
-        Telefone.setBounds(60, 220, 130, 50);
+        getContentPane().add(Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 130, 50));
 
         ComplementoEnd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         ComplementoEnd.setText("Complemento:");
-        getContentPane().add(ComplementoEnd);
-        ComplementoEnd.setBounds(60, 510, 180, 50);
+        getContentPane().add(ComplementoEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, 180, 50));
 
         CNPJ.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         CNPJ.setText("CNPJ:");
-        getContentPane().add(CNPJ);
-        CNPJ.setBounds(60, 260, 130, 50);
+        getContentPane().add(CNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 130, 50));
 
-        Caixa3.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa3);
-        Caixa3.setBounds(140, 270, 460, 30);
+        CPNJText.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(CPNJText, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 350, 30));
 
         Caixa1End.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa1End);
-        Caixa1End.setBounds(220, 520, 480, 30);
+        getContentPane().add(Caixa1End, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 580, 480, 30));
 
-        Nome.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Nome.setText("Nome:");
-        getContentPane().add(Nome);
-        Nome.setBounds(60, 180, 130, 50);
+        LoginEmpresa.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        LoginEmpresa.setText("Login da Empresa:");
+        getContentPane().add(LoginEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 200, 50));
 
         CepEnd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         CepEnd.setText("CEP:");
-        getContentPane().add(CepEnd);
-        CepEnd.setBounds(590, 470, 130, 50);
+        getContentPane().add(CepEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 130, 50));
 
         BairroEnd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         BairroEnd.setText("Bairro:");
-        getContentPane().add(BairroEnd);
-        BairroEnd.setBounds(60, 430, 130, 50);
+        getContentPane().add(BairroEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 130, 50));
 
         EstadoEnd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         EstadoEnd.setText("Estado:");
-        getContentPane().add(EstadoEnd);
-        EstadoEnd.setBounds(60, 470, 130, 50);
+        getContentPane().add(EstadoEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, 130, 50));
 
         Caixa1.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa1);
-        Caixa1.setBounds(140, 190, 460, 30);
+        getContentPane().add(Caixa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 340, 30));
 
         Caixa5End.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa5End);
-        Caixa5End.setBounds(650, 480, 270, 30);
+        getContentPane().add(Caixa5End, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 480, 270, 30));
 
         Caixa2End.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa2End);
-        Caixa2End.setBounds(140, 440, 260, 30);
+        getContentPane().add(Caixa2End, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 260, 30));
 
         Caixa3End.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa3End);
-        Caixa3End.setBounds(150, 480, 260, 30);
+        getContentPane().add(Caixa3End, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 540, 260, 30));
 
         LogadouroEnd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         LogadouroEnd.setText("Logadouro:");
-        getContentPane().add(LogadouroEnd);
-        LogadouroEnd.setBounds(60, 390, 130, 50);
+        getContentPane().add(LogadouroEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 130, 50));
 
         Caixa6End.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa6End);
-        Caixa6End.setBounds(190, 400, 390, 30);
+        getContentPane().add(Caixa6End, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 390, 30));
 
         NumeroEnd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         NumeroEnd.setText("Número:");
-        getContentPane().add(NumeroEnd);
-        NumeroEnd.setBounds(590, 390, 130, 50);
+        getContentPane().add(NumeroEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 130, 50));
 
         Caixa7End.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa7End);
-        Caixa7End.setBounds(690, 400, 150, 30);
+        getContentPane().add(Caixa7End, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, 150, 30));
 
         CidadeEnd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         CidadeEnd.setText("Cidade:");
-        getContentPane().add(CidadeEnd);
-        CidadeEnd.setBounds(590, 430, 130, 50);
+        getContentPane().add(CidadeEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 130, 50));
 
         Caixa8End.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(Caixa8End);
-        Caixa8End.setBounds(680, 440, 220, 30);
+        getContentPane().add(Caixa8End, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 220, 30));
 
         ContinuarBotao.setBackground(new java.awt.Color(255, 229, 77));
+        ContinuarBotao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ContinuarBotao.setText("Continuar");
-        getContentPane().add(ContinuarBotao);
-        ContinuarBotao.setBounds(360, 590, 110, 50);
+        ContinuarBotao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContinuarBotaoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ContinuarBotao, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 630, 110, 50));
 
         CarrinhoIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/carrinho menor.jpg"))); // NOI18N
-        getContentPane().add(CarrinhoIcon);
-        CarrinhoIcon.setBounds(10, 10, 210, 100);
+        getContentPane().add(CarrinhoIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 210, 100));
 
         TituloEmpresa1.setBackground(new java.awt.Color(255, 204, 153));
         TituloEmpresa1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         TituloEmpresa1.setText("Dados da Empresa");
-        getContentPane().add(TituloEmpresa1);
-        TituloEmpresa1.setBounds(60, 110, 240, 60);
+        getContentPane().add(TituloEmpresa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 240, 60));
 
         jPanel1.setBackground(new java.awt.Color(255, 229, 77));
 
@@ -187,16 +175,39 @@ public class TelaCadastro extends javax.swing.JFrame {
         TituloEmpresa.setText("Cadastro do Supermercado");
         jPanel1.add(TituloEmpresa);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(120, 40, 510, 40);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 510, 40));
+
+        Nome.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Nome.setText("Nome da Empresa:");
+        getContentPane().add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 210, 50));
+
+        SenhaEmpresaRep.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(SenhaEmpresaRep, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 220, 30));
+
+        Caixa4.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(Caixa4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 460, 30));
+
+        SenhaDados.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        SenhaDados.setText("Repita a senha:");
+        getContentPane().add(SenhaDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 180, 50));
+
+        SenhaDados1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        SenhaDados1.setText("Senha:");
+        getContentPane().add(SenhaDados1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 130, 50));
+
+        SenhaEmpresa.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(SenhaEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 220, 30));
 
         TelaFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo.jpg"))); // NOI18N
         TelaFundo.setText("jLabel1");
-        getContentPane().add(TelaFundo);
-        TelaFundo.setBounds(0, 0, 940, 650);
+        getContentPane().add(TelaFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 960, 780));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ContinuarBotaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarBotaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ContinuarBotaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,12 +247,13 @@ public class TelaCadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BairroEnd;
     private javax.swing.JLabel CNPJ;
+    private javax.swing.JTextField CPNJText;
     private javax.swing.JTextField Caixa1;
     private javax.swing.JTextField Caixa1End;
     private javax.swing.JTextField Caixa2;
     private javax.swing.JTextField Caixa2End;
-    private javax.swing.JTextField Caixa3;
     private javax.swing.JTextField Caixa3End;
+    private javax.swing.JTextField Caixa4;
     private javax.swing.JTextField Caixa5End;
     private javax.swing.JTextField Caixa6End;
     private javax.swing.JTextField Caixa7End;
@@ -253,8 +265,13 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JButton ContinuarBotao;
     private javax.swing.JLabel EstadoEnd;
     private javax.swing.JLabel LogadouroEnd;
+    private javax.swing.JLabel LoginEmpresa;
     private javax.swing.JLabel Nome;
     private javax.swing.JLabel NumeroEnd;
+    private javax.swing.JLabel SenhaDados;
+    private javax.swing.JLabel SenhaDados1;
+    private javax.swing.JPasswordField SenhaEmpresa;
+    private javax.swing.JPasswordField SenhaEmpresaRep;
     private javax.swing.JLabel TelaFundo;
     private javax.swing.JLabel Telefone;
     private javax.swing.JLabel TituloEmpresa;
