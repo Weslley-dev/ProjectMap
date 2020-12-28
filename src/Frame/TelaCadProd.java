@@ -45,6 +45,12 @@ public class TelaCadProd extends javax.swing.JFrame {
         btnEditar = new java.awt.Button();
         btnNovo = new java.awt.Button();
         Preco = new javax.swing.JTextField();
+        Preco1 = new javax.swing.JTextField();
+        Preco2 = new javax.swing.JTextField();
+        BarraPreco1 = new javax.swing.JTextField();
+        BarraPreco2 = new javax.swing.JTextField();
+        Preco3 = new javax.swing.JTextField();
+        BarraPreco3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -103,7 +109,7 @@ public class TelaCadProd extends javax.swing.JFrame {
                 BarraPrecoActionPerformed(evt);
             }
         });
-        jPanel1.add(BarraPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 170, -1));
+        jPanel1.add(BarraPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 60, -1));
 
         btnSair.setBackground(new java.awt.Color(255, 229, 77));
         btnSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -124,38 +130,38 @@ public class TelaCadProd extends javax.swing.JFrame {
         TabProd.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         TabProd.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Produto", "Marca", "Código", "Preço"
+                "Produto", "Marca", "Código", "Preço", "Quantidade", "Prateleira:", "Corredor:"
             }
         ));
         Tabela.setViewportView(TabProd);
@@ -198,14 +204,74 @@ public class TelaCadProd extends javax.swing.JFrame {
         Preco.setEditable(false);
         Preco.setBackground(new java.awt.Color(255, 255, 255));
         Preco.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        Preco.setText("Preço:");
+        Preco.setText("Prateleira:");
         Preco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         Preco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PrecoActionPerformed(evt);
             }
         });
-        jPanel1.add(Preco, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 50, -1));
+        jPanel1.add(Preco, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 70, -1));
+
+        Preco1.setEditable(false);
+        Preco1.setBackground(new java.awt.Color(255, 255, 255));
+        Preco1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        Preco1.setText("Corredor:");
+        Preco1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Preco1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Preco1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Preco1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 60, -1));
+
+        Preco2.setEditable(false);
+        Preco2.setBackground(new java.awt.Color(255, 255, 255));
+        Preco2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        Preco2.setText("Quantidade:");
+        Preco2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Preco2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Preco2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Preco2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 80, -1));
+
+        BarraPreco1.setBackground(new java.awt.Color(204, 204, 204));
+        BarraPreco1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BarraPreco1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BarraPreco1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 110, -1));
+
+        BarraPreco2.setBackground(new java.awt.Color(204, 204, 204));
+        BarraPreco2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BarraPreco2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BarraPreco2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 170, -1));
+
+        Preco3.setEditable(false);
+        Preco3.setBackground(new java.awt.Color(255, 255, 255));
+        Preco3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        Preco3.setText("Preço:");
+        Preco3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        Preco3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Preco3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Preco3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 50, -1));
+
+        BarraPreco3.setBackground(new java.awt.Color(204, 204, 204));
+        BarraPreco3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BarraPreco3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BarraPreco3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 80, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
@@ -244,6 +310,30 @@ public class TelaCadProd extends javax.swing.JFrame {
     private void BarraPrecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BarraPrecoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BarraPrecoActionPerformed
+
+    private void Preco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Preco1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Preco1ActionPerformed
+
+    private void Preco2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Preco2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Preco2ActionPerformed
+
+    private void BarraPreco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BarraPreco1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BarraPreco1ActionPerformed
+
+    private void BarraPreco2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BarraPreco2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BarraPreco2ActionPerformed
+
+    private void Preco3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Preco3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Preco3ActionPerformed
+
+    private void BarraPreco3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BarraPreco3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BarraPreco3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,11 +375,17 @@ public class TelaCadProd extends javax.swing.JFrame {
     private javax.swing.JTextField BarraCodigo;
     private javax.swing.JTextField BarraMarca;
     private javax.swing.JTextField BarraPreco;
+    private javax.swing.JTextField BarraPreco1;
+    private javax.swing.JTextField BarraPreco2;
+    private javax.swing.JTextField BarraPreco3;
     private javax.swing.JTextField BarraProduto;
     private javax.swing.JScrollPane CdtProdut;
     private javax.swing.JTextField Codigo;
     private javax.swing.JTextField Marca;
     private javax.swing.JTextField Preco;
+    private javax.swing.JTextField Preco1;
+    private javax.swing.JTextField Preco2;
+    private javax.swing.JTextField Preco3;
     private javax.swing.JTextField Produto;
     private javax.swing.JTable TabProd;
     private javax.swing.JScrollPane Tabela;

@@ -106,17 +106,17 @@ public class TelaPesquisa extends javax.swing.JFrame {
         TabProd.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         TabProd.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Produto", "Marca", "Preço", "Endereço"
+                "Código", "Produto", "Marca", "Preço", "Endereço", "Prateleira:", "Corredor:"
             }
         ));
         Tabela.setViewportView(TabProd);
