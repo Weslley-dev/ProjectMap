@@ -39,14 +39,16 @@ public class TelaCadUsu1 extends javax.swing.JFrame {
         BarraEmailUsu = new javax.swing.JTextField();
         BarraCPFUsu = new javax.swing.JTextField();
         BarraLoginUsu = new javax.swing.JTextField();
-        btnCdtUsu = new java.awt.Button();
-        btnVoltarCadUsu = new java.awt.Button();
         PasswordUsu = new javax.swing.JPasswordField();
+        btnVoltar = new javax.swing.JButton();
+        btnFim2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(720, 480));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtCdtUsu.setEditable(false);
@@ -119,24 +121,34 @@ public class TelaCadUsu1 extends javax.swing.JFrame {
         BarraLoginUsu.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(BarraLoginUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 190, -1));
 
-        btnCdtUsu.setActionCommand("Acessar");
-        btnCdtUsu.setBackground(new java.awt.Color(255, 229, 77));
-        btnCdtUsu.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnCdtUsu.setLabel("Cadastrar");
-        btnCdtUsu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCdtUsuActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnCdtUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, 110, 40));
-
-        btnVoltarCadUsu.setBackground(new java.awt.Color(255, 229, 77));
-        btnVoltarCadUsu.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        btnVoltarCadUsu.setLabel("Voltar");
-        jPanel1.add(btnVoltarCadUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, -1));
-
         PasswordUsu.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(PasswordUsu, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 190, -1));
+
+        btnVoltar.setBackground(new java.awt.Color(255, 229, 77));
+        btnVoltar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnVoltar.setText("Voltar");
+        btnVoltar.setToolTipText("");
+        btnVoltar.setActionCommand("");
+        btnVoltar.setBorderPainted(false);
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 20));
+
+        btnFim2.setBackground(new java.awt.Color(255, 229, 77));
+        btnFim2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnFim2.setText("Finalizar");
+        btnFim2.setToolTipText("");
+        btnFim2.setActionCommand("");
+        btnFim2.setBorderPainted(false);
+        btnFim2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFim2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnFim2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, 100, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
@@ -156,9 +168,15 @@ public class TelaCadUsu1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtLoginUsuActionPerformed
 
-    private void btnCdtUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCdtUsuActionPerformed
+    private void btnFim2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFim2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCdtUsuActionPerformed
+    }//GEN-LAST:event_btnFim2ActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        // TODO add your handling code here:
+        TelaTipCad objeto5 = new TelaTipCad();
+        objeto5.setVisible(true);
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,8 +221,8 @@ public class TelaCadUsu1 extends javax.swing.JFrame {
     private javax.swing.JTextField BarraNomeUsu;
     private javax.swing.JScrollPane CdtUsu;
     private javax.swing.JPasswordField PasswordUsu;
-    private java.awt.Button btnCdtUsu;
-    private java.awt.Button btnVoltarCadUsu;
+    private javax.swing.JButton btnFim2;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtCPFUsu;
     private javax.swing.JTextPane txtCdtUsu;

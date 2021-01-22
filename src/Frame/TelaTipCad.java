@@ -26,53 +26,90 @@ public class TelaTipCad extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         EscCdt = new javax.swing.JPanel();
-        btnCli = new java.awt.Button();
-        btnEmp = new java.awt.Button();
-        Logo2 = new javax.swing.JLabel();
+        btnEmpresa = new javax.swing.JButton();
+        btnCliente = new javax.swing.JButton();
+        btnVoltar3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Logo2.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         EscCdt.setBackground(new java.awt.Color(255, 255, 255));
         EscCdt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCli.setBackground(new java.awt.Color(255, 229, 77));
-        btnCli.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        btnCli.setLabel("Cliente");
-        btnCli.addActionListener(new java.awt.event.ActionListener() {
+        btnEmpresa.setBackground(new java.awt.Color(255, 229, 77));
+        btnEmpresa.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        btnEmpresa.setText("Empresa");
+        btnEmpresa.setToolTipText("");
+        btnEmpresa.setActionCommand("");
+        btnEmpresa.setBorderPainted(false);
+        btnEmpresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCliActionPerformed(evt);
+                btnEmpresaActionPerformed(evt);
             }
         });
-        EscCdt.add(btnCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 210, 50));
+        EscCdt.add(btnEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 210, 50));
 
-        btnEmp.setBackground(new java.awt.Color(255, 229, 77));
-        btnEmp.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        btnEmp.setLabel("Empresa");
-        btnEmp.addActionListener(new java.awt.event.ActionListener() {
+        btnCliente.setBackground(new java.awt.Color(255, 229, 77));
+        btnCliente.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        btnCliente.setText("Cliente");
+        btnCliente.setToolTipText("");
+        btnCliente.setActionCommand("");
+        btnCliente.setBorderPainted(false);
+        btnCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEmpActionPerformed(evt);
+                btnClienteActionPerformed(evt);
             }
         });
-        EscCdt.add(btnEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 210, 50));
+        EscCdt.add(btnCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 210, 50));
 
-        Logo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/2020-12-26 (4).png"))); // NOI18N
-        Logo2.setText("jLabel1");
-        EscCdt.add(Logo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-600, -120, 2070, 1090));
+        btnVoltar3.setBackground(new java.awt.Color(255, 229, 77));
+        btnVoltar3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnVoltar3.setText("Voltar");
+        btnVoltar3.setToolTipText("");
+        btnVoltar3.setActionCommand("");
+        btnVoltar3.setBorderPainted(false);
+        btnVoltar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltar3ActionPerformed(evt);
+            }
+        });
+        EscCdt.add(btnVoltar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 20));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Logo2.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        EscCdt.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-600, -100, -1, -1));
 
         getContentPane().add(EscCdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCliActionPerformed
+    private void btnEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpresaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCliActionPerformed
+        TelaCadEmp objeto2 = new TelaCadEmp(); //Criei uma instância que gera um objeto
+        objeto2.setVisible(true); //Através do objeto solicitei abrir a TelaCadEmp
+    }//GEN-LAST:event_btnEmpresaActionPerformed
 
-    private void btnEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpActionPerformed
+    private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEmpActionPerformed
+        TelaCadUsu1 objeto3 = new TelaCadUsu1();
+        objeto3.setVisible(true);
+    }//GEN-LAST:event_btnClienteActionPerformed
+
+    private void btnVoltar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltar3ActionPerformed
+        // TODO add your handling code here:
+        TelaLogin objeto4 = new TelaLogin();
+        objeto4.setVisible(true);
+        
+    }//GEN-LAST:event_btnVoltar3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,9 +148,11 @@ public class TelaTipCad extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel EscCdt;
-    private javax.swing.JLabel Logo2;
-    private java.awt.Button btnCli;
-    private java.awt.Button btnEmp;
+    private javax.swing.JButton btnCliente;
+    private javax.swing.JButton btnEmpresa;
+    private javax.swing.JButton btnVoltar3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 
 }

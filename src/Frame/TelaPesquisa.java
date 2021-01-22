@@ -35,13 +35,14 @@ public class TelaPesquisa extends javax.swing.JFrame {
         Marca = new javax.swing.JTextField();
         BarraProduto = new javax.swing.JTextField();
         BarraMarca = new javax.swing.JTextField();
-        btnPesquisar = new java.awt.Button();
         Tabela = new javax.swing.JScrollPane();
         TabProd = new javax.swing.JTable();
         BarraCodigo = new javax.swing.JTextField();
-        btnSair1 = new java.awt.Button();
+        btnPesquisar = new javax.swing.JButton();
+        btnsair1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -92,17 +93,7 @@ public class TelaPesquisa extends javax.swing.JFrame {
         BarraMarca.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(BarraMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 420, -1));
 
-        btnPesquisar.setBackground(new java.awt.Color(255, 229, 77));
-        btnPesquisar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnPesquisar.setLabel("Pesquisar");
-        btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPesquisarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 212, 120, 30));
-
-        TabProd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        TabProd.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         TabProd.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         TabProd.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -116,7 +107,7 @@ public class TelaPesquisa extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Produto", "Marca", "Preço", "Endereço", "Prateleira:", "Corredor:"
+                "Código", "Produto", "Marca", "Preço", "Endereço", "Prateleira", "Corredor"
             }
         ));
         Tabela.setViewportView(TabProd);
@@ -126,15 +117,31 @@ public class TelaPesquisa extends javax.swing.JFrame {
         BarraCodigo.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(BarraCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 190, -1));
 
-        btnSair1.setBackground(new java.awt.Color(255, 229, 77));
-        btnSair1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnSair1.setLabel("Sair");
-        btnSair1.addActionListener(new java.awt.event.ActionListener() {
+        btnPesquisar.setBackground(new java.awt.Color(255, 229, 77));
+        btnPesquisar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnPesquisar.setText("Pesquisar");
+        btnPesquisar.setToolTipText("");
+        btnPesquisar.setActionCommand("");
+        btnPesquisar.setBorderPainted(false);
+        btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSair1ActionPerformed(evt);
+                btnPesquisarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSair1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, 70, -1));
+        jPanel1.add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 100, 30));
+
+        btnsair1.setBackground(new java.awt.Color(255, 229, 77));
+        btnsair1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnsair1.setText("Sair");
+        btnsair1.setToolTipText("");
+        btnsair1.setActionCommand("");
+        btnsair1.setBorderPainted(false);
+        btnsair1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsair1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnsair1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, 70, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
@@ -154,9 +161,9 @@ public class TelaPesquisa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
-    private void btnSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSair1ActionPerformed
+    private void btnsair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsair1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSair1ActionPerformed
+    }//GEN-LAST:event_btnsair1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,8 +213,8 @@ public class TelaPesquisa extends javax.swing.JFrame {
     private javax.swing.JTextField Produto;
     private javax.swing.JTable TabProd;
     private javax.swing.JScrollPane Tabela;
-    private java.awt.Button btnPesquisar;
-    private java.awt.Button btnSair1;
+    private javax.swing.JButton btnPesquisar;
+    private javax.swing.JButton btnsair1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextPane txtPesProdut;
     // End of variables declaration//GEN-END:variables

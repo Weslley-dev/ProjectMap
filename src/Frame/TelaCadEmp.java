@@ -39,8 +39,6 @@ public class TelaCadEmp extends javax.swing.JFrame {
         BarraEmailEmp = new javax.swing.JTextField();
         BarraCnpjEmp = new javax.swing.JTextField();
         BarraLoginEmp = new javax.swing.JTextField();
-        btnCdtEmp = new java.awt.Button();
-        txtUFEmp = new javax.swing.JTextField();
         BarraFoneEmp = new javax.swing.JTextField();
         txtCNPJ = new javax.swing.JTextField();
         txtDadoEmp = new javax.swing.JTextField();
@@ -56,10 +54,13 @@ public class TelaCadEmp extends javax.swing.JFrame {
         BarraNumEmp = new javax.swing.JTextField();
         txtEnderecoEmp = new javax.swing.JTextField();
         BarraEndereço = new javax.swing.JTextField();
-        btnVoltar = new java.awt.Button();
         PasswordEmp = new javax.swing.JPasswordField();
+        btnVoltarTip = new javax.swing.JButton();
+        btnFin1 = new javax.swing.JButton();
+        txtNumeroEmp1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -150,30 +151,6 @@ public class TelaCadEmp extends javax.swing.JFrame {
         BarraLoginEmp.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(BarraLoginEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 190, -1));
 
-        btnCdtEmp.setActionCommand("Acessar");
-        btnCdtEmp.setBackground(new java.awt.Color(255, 229, 77));
-        btnCdtEmp.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btnCdtEmp.setLabel("Cadastrar");
-        btnCdtEmp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCdtEmpActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnCdtEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 110, 40));
-
-        txtUFEmp.setEditable(false);
-        txtUFEmp.setBackground(new java.awt.Color(255, 255, 255));
-        txtUFEmp.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtUFEmp.setText("UF:");
-        txtUFEmp.setToolTipText("");
-        txtUFEmp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        txtUFEmp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUFEmpActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtUFEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 30, -1));
-
         BarraFoneEmp.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(BarraFoneEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 250, -1));
 
@@ -254,14 +231,14 @@ public class TelaCadEmp extends javax.swing.JFrame {
         txtNumeroEmp.setEditable(false);
         txtNumeroEmp.setBackground(new java.awt.Color(255, 255, 255));
         txtNumeroEmp.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtNumeroEmp.setText("Nº:");
+        txtNumeroEmp.setText("UF:");
         txtNumeroEmp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         txtNumeroEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNumeroEmpActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNumeroEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 30, -1));
+        jPanel1.add(txtNumeroEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 30, -1));
 
         BarraNumEmp.setBackground(new java.awt.Color(204, 204, 204));
         BarraNumEmp.addActionListener(new java.awt.event.ActionListener() {
@@ -286,13 +263,46 @@ public class TelaCadEmp extends javax.swing.JFrame {
         });
         jPanel1.add(BarraEndereço, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 360, -1));
 
-        btnVoltar.setBackground(new java.awt.Color(255, 229, 77));
-        btnVoltar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        btnVoltar.setLabel("Voltar");
-        jPanel1.add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, -1));
-
         PasswordEmp.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(PasswordEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 190, -1));
+
+        btnVoltarTip.setBackground(new java.awt.Color(255, 229, 77));
+        btnVoltarTip.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnVoltarTip.setText("Voltar");
+        btnVoltarTip.setToolTipText("");
+        btnVoltarTip.setActionCommand("");
+        btnVoltarTip.setBorderPainted(false);
+        btnVoltarTip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarTipActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnVoltarTip, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 20));
+
+        btnFin1.setBackground(new java.awt.Color(255, 229, 77));
+        btnFin1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnFin1.setText("Finalizar");
+        btnFin1.setToolTipText("");
+        btnFin1.setActionCommand("");
+        btnFin1.setBorderPainted(false);
+        btnFin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFin1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnFin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 100, 40));
+
+        txtNumeroEmp1.setEditable(false);
+        txtNumeroEmp1.setBackground(new java.awt.Color(255, 255, 255));
+        txtNumeroEmp1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtNumeroEmp1.setText("Nº:");
+        txtNumeroEmp1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        txtNumeroEmp1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNumeroEmp1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtNumeroEmp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 30, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
@@ -312,10 +322,6 @@ public class TelaCadEmp extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtLoginEmpActionPerformed
 
-    private void btnCdtEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCdtEmpActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCdtEmpActionPerformed
-
     private void txtEmailEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailEmpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailEmpActionPerformed
@@ -331,10 +337,6 @@ public class TelaCadEmp extends javax.swing.JFrame {
     private void BarraCidEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BarraCidEmpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BarraCidEmpActionPerformed
-
-    private void txtUFEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUFEmpActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUFEmpActionPerformed
 
     private void BarraUFEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BarraUFEmpActionPerformed
         // TODO add your handling code here:
@@ -359,6 +361,20 @@ public class TelaCadEmp extends javax.swing.JFrame {
     private void BarraEndereçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BarraEndereçoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BarraEndereçoActionPerformed
+
+    private void btnFin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFin1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnFin1ActionPerformed
+
+    private void btnVoltarTipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarTipActionPerformed
+        // TODO add your handling code here:
+        TelaTipCad objeto5 = new TelaTipCad();
+        objeto5.setVisible(true);
+    }//GEN-LAST:event_btnVoltarTipActionPerformed
+
+    private void txtNumeroEmp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroEmp1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNumeroEmp1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -412,8 +428,8 @@ public class TelaCadEmp extends javax.swing.JFrame {
     private javax.swing.JTextField BarraUFEmp;
     private javax.swing.JScrollPane CdtEmp;
     private javax.swing.JPasswordField PasswordEmp;
-    private java.awt.Button btnCdtEmp;
-    private java.awt.Button btnVoltar;
+    private javax.swing.JButton btnFin1;
+    private javax.swing.JButton btnVoltarTip;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtBairroEmp;
     private javax.swing.JTextField txtCNPJ;
@@ -428,7 +444,7 @@ public class TelaCadEmp extends javax.swing.JFrame {
     private javax.swing.JTextField txtLoginEmp;
     private javax.swing.JTextField txtNomeEmp;
     private javax.swing.JTextField txtNumeroEmp;
+    private javax.swing.JTextField txtNumeroEmp1;
     private javax.swing.JTextField txtSenhaEmp;
-    private javax.swing.JTextField txtUFEmp;
     // End of variables declaration//GEN-END:variables
 }
