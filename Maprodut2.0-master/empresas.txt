@@ -1,0 +1,12 @@
+
+Nome: empresa x
+Email: empresax@gmail.com
+CNPJ: 87. 897. 987/9878-97
+Login: empresax
+Senha: 123
+Endereço: rua dos bobos
+Bairro: nada
+Nº: 0
+UF: AC
+Complemento: nada
+Cidade: dos bobos

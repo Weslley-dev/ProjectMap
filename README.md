@@ -1,2 +1,0 @@
-# ProjectMap
-Projeto de POO.
