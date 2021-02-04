@@ -171,23 +171,23 @@ public class TelaCadUsu1 extends javax.swing.JFrame {
     }//GEN-LAST:event_txtLoginUsuActionPerformed
 
     private void btnFim2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFim2ActionPerformed
-       Clientes clientes = new Clientes ();
+       Clientes cadastros = new Clientes ();
         /*
         Do mesmo jeito da classe empresas, aqui eu instanciei a classe clientes para trabalhar com
         o objeto empresa, utilizei os métodos de acesso setters e getters novamente.
         
         */
         
-       clientes.setNome(jTxtNome.getText());
-       clientes.setEmail(jTxtEmail.getText());
-       clientes.setCpf(jTxtCPF.getText());
-       clientes.setLogin(jTxtLogin.getText());
-       clientes.setSenha(jTxtSenha.getText());
+       cadastros.setNome(jTxtNome.getText());
+       cadastros.setEmail(jTxtEmail.getText());
+       cadastros.setCpf(jTxtCPF.getText());
+       cadastros.setLogin(jTxtLogin.getText());
+       cadastros.setSenha(jTxtSenha.getText());
        
        /* Aqui criei um JOptionPane para ter a caixa de diálogo 
        quando for salvar os dados. */ 
        
-       JOptionPane.showMessageDialog(jTxtSenha, clientes.salvar());
+       JOptionPane.showMessageDialog(null, cadastros.salvar());
        
        /* aqui utilizei o acesso ao arquivo texto para limpar os dados após 
        o cadastro ser concluído. Novamente utilizando os métodos especiais.

@@ -135,7 +135,7 @@ public class Empresas {
     public String salvar (){
           
         try { 
-            FileWriter fw = new FileWriter("empresas.txt", true);
+            FileWriter fw = new FileWriter("cadastros.txt", true);
             PrintWriter pw = new PrintWriter (fw);
             pw.println("Nome: " + this.nome);
             pw.println("Email: " + this.email);

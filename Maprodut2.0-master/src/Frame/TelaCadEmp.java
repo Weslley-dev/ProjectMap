@@ -352,29 +352,29 @@ public class TelaCadEmp extends javax.swing.JFrame {
     }//GEN-LAST:event_jTxtEndActionPerformed
 
     private void btnFin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFin1ActionPerformed
-        Empresas empresas = new Empresas ();
+        Empresas cadastros = new Empresas ();
         /*
         Aqui eu instanciei a classe empresas para trabalhar com
         o objeto empresa, utilizei os métodos de acesso setters e getters novamente.
         
         */
-       empresas.setNome(jTxtNome.getText());
-       empresas.setEmail(jTxtEmail.getText());
-       empresas.setCnpj(jTxtCNPJ.getText());
-       empresas.setTelefone(jTxtTel.getText());
-       empresas.setLogin(jTxtLogin.getText());
-       empresas.setSenha(jTxtSenha.getText());
-       empresas.setEnd(jTxtEnd.getText());
-       empresas.setBairro(jTxtBairro.getText());
-       empresas.setNumero(jTxtNumero.getText());
-       empresas.setUf((String) jTxtUf.getSelectedItem());
-       empresas.setComplemento(jTxtComplemento.getText());
-       empresas.setCidade(jTxtCidade.getText());
+       cadastros.setNome(jTxtNome.getText());
+       cadastros.setEmail(jTxtEmail.getText());
+       cadastros.setCnpj(jTxtCNPJ.getText());
+       cadastros.setTelefone(jTxtTel.getText());
+       cadastros.setLogin(jTxtLogin.getText());
+       cadastros.setSenha(jTxtSenha.getText());
+       cadastros.setEnd(jTxtEnd.getText());
+       cadastros.setBairro(jTxtBairro.getText());
+       cadastros.setNumero(jTxtNumero.getText());
+       cadastros.setUf((String) jTxtUf.getSelectedItem());
+       cadastros.setComplemento(jTxtComplemento.getText());
+       cadastros.setCidade(jTxtCidade.getText());
        
        /* Aqui criei um JOptionPane para ter a caixa de diálogo 
        quando for salvar os dados. */ 
        
-       JOptionPane.showMessageDialog(jTxtSenha, empresas.salvar());
+       JOptionPane.showMessageDialog(null, cadastros.salvar());
        
        
        /* aqui utilizei o acesso ao arquivo texto para limpar os dados após 
