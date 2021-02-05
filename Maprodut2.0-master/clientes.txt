@@ -1,5 +1,0 @@
-Nome: asdasd
-Email: asdasd
-CPF: 879.879.879-78
-Login: asd
-Senha: asd
