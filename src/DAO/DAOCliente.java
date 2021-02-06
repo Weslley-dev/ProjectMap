@@ -83,8 +83,88 @@ public class DAOCliente extends ConexaoSQLite {
         return listaCliente;
     }
     
+    /**
+     * Excluir um Cliente do banco de dados pelo codigo
+     * @param pCodigo
+     * @return boolean
+     */
+    public boolean excluirUsuarioDAO(int pCodigo){
+        conectar();
+        PreparedStatement preparedStatement;
+        String sql = "DELETE FROM tbl_cliente WHERE pk_usu_id = '"+pCodigo+"'";
+        preparedStatement = this.criarPreparedStatement(sql);
+        try {
+         preparedStatement.executeUpdate();   
+        }catch (SQLException ex) {
+            Logger.getLogger(DAOCliente.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
+            return false;
+        }finally{
+            if(preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                }catch (SQLException ex) {
+                    ex.printStackTrace();
+                    Logger.getLogger(DAOCliente.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        this.desconectar();      
+        return true;
+    }
+    /**
+     * Exibir os dados ao clicar em uma linha da tabela
+     * @param pCodigoCliente
+     * @return 
+     */
+    public Cliente getClienteDAO(int pCodigoCliente){
+        Cliente modelCliente = new Cliente();
+        conectar();
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        
+        String sql = "SELECT pk_usu_id, "
+                +"usu_nome, "
+                +"usu_email, "
+                +"usu_cpf, "
+                +"usu_login, "
+                +"usu_senha "
+                +" FROM tbl_cliente WHERE pk_usu_id = '"+pCodigoCliente+"'";
+        
+        preparedStatement = criarPreparedStatement(sql);
+        try{
+            resultSet = preparedStatement.executeQuery();
+            
+            while (resultSet.next()){
+                modelCliente= new Cliente();
+                modelCliente.setUsuId(resultSet.getInt("pk_usu_id"));
+                modelCliente.setUsuNome(resultSet.getString("usu_nome"));
+                modelCliente.setUsuEmail(resultSet.getString("usu_email"));
+                modelCliente.setUsuCPF(resultSet.getString("usu_cpf"));
+                modelCliente.setUsuLogin(resultSet.getString("usu_login"));
+                modelCliente.setUsuSenha(resultSet.getString("usu_senha"));
+            }
+            
+        }catch (SQLException ex) {
+            Logger.getLogger(DAOCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }catch (Exception e) {
+            System.err.println(e);
+        }
+        desconectar();
+        return modelCliente;
+    }
+    
+    
+    
+    /*
+    aqui é onde crio a validação do cliente acessando os dados do MySQL
+    instanciando novamente o objeto cliente e conectando com a base de dados do SQL.
+    
+    */
     public boolean validarCliente(Cliente Cliente){
         conectar();
+        
+        // utilizei o ResultSet para buscar um resultado na Query.
         ResultSet resultSet = null;
         PreparedStatement preparedStatement = null;
         
@@ -103,7 +183,7 @@ public class DAOCliente extends ConexaoSQLite {
             
         try{
             resultSet = preparedStatement.executeQuery();
-            
+            // utilizei o conceito de SQL de preparedStatement para executar a Query caso haja resultado.
             if (resultSet.next()) {
                 return true; 
             } else {
@@ -123,7 +203,41 @@ public class DAOCliente extends ConexaoSQLite {
             }
         }  
     }
-
-   
+    // no fim foi um try e catch padrão para terminar a consulta.
     
-}    
+    public List<Cliente> readForNome(String nome){
+        conectar();
+        Cliente modelCliente = new Cliente();
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+        List<Cliente> listaCliente = new ArrayList<>();
+        
+        String sql = "SELECT pk_usu_id, "
+                +"usu_nome, "
+                +"usu_email, "
+                +"usu_cpf, "
+                +"usu_login "
+                + " FROM tbl_cliente WHERE usu_nome LIKE ?";
+
+
+        try{
+            preparedStatement = criarPreparedStatement(sql);
+            preparedStatement.setString(1, "%"+nome+"%");
+            resultSet = preparedStatement.executeQuery();
+            
+            while (resultSet.next()) {
+                modelCliente = new Cliente();
+                modelCliente.setUsuId(resultSet.getInt("pk_usu_id"));
+                modelCliente.setUsuNome(resultSet.getString("usu_nome"));
+                modelCliente.setUsuEmail(resultSet.getString("usu_email"));
+                modelCliente.setUsuCPF(resultSet.getString("usu_cpf"));
+                modelCliente.setUsuLogin(resultSet.getString("usu_login"));
+                listaCliente.add(modelCliente);
+            }
+        }catch (Exception ex){
+            System.err.println(ex);
+        }
+        desconectar();
+        return listaCliente;
+    }
+}

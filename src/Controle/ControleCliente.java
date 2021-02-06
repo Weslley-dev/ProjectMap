@@ -30,9 +30,16 @@ public class ControleCliente {
         return this.dAOCliente.getListaClienteDAO();
     }
 
+    public boolean excluirClienteControle(int pCodigo) {
+        return this.dAOCliente.excluirUsuarioDAO(pCodigo);
+    }    
+
+    public Cliente getClienteControle(int pCodigo) {
+        return this.dAOCliente.getClienteDAO(pCodigo);
+    }
+    // criei o método validar cliente e instanciei o objeto cliente
     public boolean validarClienteController(Cliente cliente) {
         return this.dAOCliente.validarCliente(cliente);
     }
-    
     
 }

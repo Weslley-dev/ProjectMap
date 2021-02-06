@@ -5,17 +5,28 @@
  */
 package Frame;
 
+import Controle.ControleProdutos;
+import DAO.DAOProdutos;
+import Model.Produtos;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author beatr
  */
 public class TelaPesquisa extends javax.swing.JFrame {
+    
+    ControleProdutos controleProdutos = new ControleProdutos();
+    List<Produtos> listaProdutos = new ArrayList<>();
 
     /**
      * Creates new form TelaCadUsu
      */
     public TelaPesquisa() {
         initComponents();
+        carregarProdutos();
     }
 
     /**
@@ -31,18 +42,15 @@ public class TelaPesquisa extends javax.swing.JFrame {
         PesProdut = new javax.swing.JScrollPane();
         txtPesProdut = new javax.swing.JTextPane();
         Produto = new javax.swing.JTextField();
-        Codigo = new javax.swing.JTextField();
-        Marca = new javax.swing.JTextField();
-        BarraProduto = new javax.swing.JTextField();
-        BarraMarca = new javax.swing.JTextField();
+        BarraPesquisa = new javax.swing.JTextField();
         Tabela = new javax.swing.JScrollPane();
-        TabProd = new javax.swing.JTable();
-        BarraCodigo = new javax.swing.JTextField();
+        TabPesProdC = new javax.swing.JTable();
         btnPesquisar = new javax.swing.JButton();
         btnPesqEnd = new javax.swing.JButton();
         btnsair2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Pesquisar Produtos");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -60,59 +68,29 @@ public class TelaPesquisa extends javax.swing.JFrame {
         Produto.setEditable(false);
         Produto.setBackground(new java.awt.Color(255, 255, 255));
         Produto.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        Produto.setText("Produto:");
+        Produto.setText("Pesquise:");
         Produto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(Produto, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 60, -1));
 
-        Codigo.setEditable(false);
-        Codigo.setBackground(new java.awt.Color(255, 255, 255));
-        Codigo.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        Codigo.setText("Código:");
-        Codigo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        Codigo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CodigoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 50, -1));
+        BarraPesquisa.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.add(BarraPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 420, -1));
 
-        Marca.setEditable(false);
-        Marca.setBackground(new java.awt.Color(255, 255, 255));
-        Marca.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        Marca.setText("Marca:");
-        Marca.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        Marca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MarcaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 50, -1));
-
-        BarraProduto.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.add(BarraProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 420, -1));
-
-        BarraMarca.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.add(BarraMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 420, -1));
-
-        TabProd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        TabProd.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        TabProd.setModel(new javax.swing.table.DefaultTableModel(
+        TabPesProdC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        TabPesProdC.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        TabPesProdC.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Empresa", "Código", "Produto", "Marca", "Preço"
+                "Código", "Empresa", "Produto", "Marca", "Preço"
             }
         ));
-        Tabela.setViewportView(TabProd);
-        if (TabProd.getColumnModel().getColumnCount() > 0) {
-            TabProd.getColumnModel().getColumn(0).setResizable(false);
+        Tabela.setViewportView(TabPesProdC);
+        if (TabPesProdC.getColumnModel().getColumnCount() > 0) {
+            TabPesProdC.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        jPanel1.add(Tabela, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 620, 150));
-
-        BarraCodigo.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.add(BarraCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 190, -1));
+        jPanel1.add(Tabela, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 620, 240));
 
         btnPesquisar.setBackground(new java.awt.Color(255, 229, 77));
         btnPesquisar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -125,7 +103,7 @@ public class TelaPesquisa extends javax.swing.JFrame {
                 btnPesquisarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 100, 30));
+        jPanel1.add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 100, 30));
 
         btnPesqEnd.setBackground(new java.awt.Color(255, 229, 77));
         btnPesqEnd.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -138,7 +116,7 @@ public class TelaPesquisa extends javax.swing.JFrame {
                 btnPesqEndActionPerformed(evt);
             }
         });
-        jPanel1.add(btnPesqEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 440, 220, -1));
+        jPanel1.add(btnPesqEnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 460, 220, -1));
 
         btnsair2.setBackground(new java.awt.Color(255, 229, 77));
         btnsair2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -151,36 +129,65 @@ public class TelaPesquisa extends javax.swing.JFrame {
                 btnsair2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnsair2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, 70, -1));
+        jPanel1.add(btnsair2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 490, 70, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 530));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarcaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MarcaActionPerformed
-
-    private void CodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CodigoActionPerformed
-
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
         // TODO add your handling code here:
+        pesquisarProduto(BarraPesquisa.getText());
     }//GEN-LAST:event_btnPesquisarActionPerformed
-
+    
+        private void pesquisarProduto(String descricao){
+        DefaultTableModel modelo7 = (DefaultTableModel) TabPesProdC.getModel();
+        modelo7.setNumRows(0);
+        DAOProdutos pdao = new DAOProdutos();
+       
+        for(Produtos p: pdao.readForProdutos(descricao)){
+           
+            modelo7.addRow(new Object[]{
+                p.getProId(),
+                p.getProEmpresa(),
+                p.getProDescricao(),
+                p.getProMarca(),
+                p.getProPreco()
+            });
+        }    
+    }
+    
     private void btnPesqEndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesqEndActionPerformed
         // TODO add your handling code here:
-        TelaLogin objeto9 = new TelaLogin();
+        TabEndereco objeto9 = new TabEndereco();
         objeto9.setVisible(true);
     }//GEN-LAST:event_btnPesqEndActionPerformed
 
     private void btnsair2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsair2ActionPerformed
         // TODO add your handling code here:
+        TelaLogin objeto9 = new TelaLogin();
+        objeto9.setVisible(true);
     }//GEN-LAST:event_btnsair2ActionPerformed
-
+    
+    private void carregarProdutos(){
+        listaProdutos = controleProdutos.getListaProdutosControle();
+        DefaultTableModel modelo4 = (DefaultTableModel) TabPesProdC.getModel();
+        modelo4.setNumRows(0);
+        
+        for (int i = 0; i < listaProdutos.size(); i++){
+            modelo4.addRow(new Object[]{
+                listaProdutos.get(i).getProId(),
+                listaProdutos.get(i).getProEmpresa(),
+                listaProdutos.get(i).getProDescricao(),
+                listaProdutos.get(i).getProMarca(),
+                listaProdutos.get(i).getProPreco()
+            });
+        }
+        
+    }    
+    
     /**
      * @param args the command line arguments
      */
@@ -220,14 +227,10 @@ public class TelaPesquisa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField BarraCodigo;
-    private javax.swing.JTextField BarraMarca;
-    private javax.swing.JTextField BarraProduto;
-    private javax.swing.JTextField Codigo;
-    private javax.swing.JTextField Marca;
+    private javax.swing.JTextField BarraPesquisa;
     private javax.swing.JScrollPane PesProdut;
     private javax.swing.JTextField Produto;
-    private javax.swing.JTable TabProd;
+    private javax.swing.JTable TabPesProdC;
     private javax.swing.JScrollPane Tabela;
     private javax.swing.JButton btnPesqEnd;
     private javax.swing.JButton btnPesquisar;

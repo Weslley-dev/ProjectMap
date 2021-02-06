@@ -10,13 +10,17 @@ import Controle.ControleCliente;
 import Model.Cliente;
 import javax.swing.JOptionPane;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author beatr
  */
 public class TelaLogin extends javax.swing.JFrame {
     
-    
+    /*
+    instanciação do objeto cliente e do objeto controlecliente para a validação de usuário
+    */
     Cliente cliente = new Cliente();
     ControleCliente controlecliente = new ControleCliente();
 
@@ -49,12 +53,12 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jbSair = new javax.swing.JButton();
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Logo2.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -117,34 +121,41 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel7.setText("Para solicitar alterações no cadastro entre em contato: maprodut@gmail.com");
         EscCdt.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, -1, -1));
 
-        jbSair.setBackground(new java.awt.Color(255, 229, 77));
-        jbSair.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jbSair.setText("Sair");
-        jbSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSairActionPerformed(evt);
-            }
-        });
-        EscCdt.add(jbSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
-
-        getContentPane().add(EscCdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
+        getContentPane().add(EscCdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 530));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcessarActionPerformed
-   
+        // TODO add your handling code here:
+        
+        if(BarraUsu.getText().equals("Admin")&&BarraSenhaLogin.getText().equals("12345")){
+            
+            JOptionPane.showMessageDialog(null, "Bem Vindo");
+            TelaTipCad objeto1 = new TelaTipCad(); //Criei uma instância que gera um objeto
+            objeto1.setVisible(true);//Através do objeto solicitei abrir a Tela de Tipo de cadastro
+        }else{
+            JOptionPane.showMessageDialog(null, "Login inválido");
+        }
+        
      cliente.setUsuLogin(BarraUsu.getText());
-     cliente.setUsuSenha(String.valueOf(BarraSenhaLogin.getPassword()));
-     
-     if (controlecliente.validarClienteController(cliente)){
+     cliente.setUsuSenha(String.valueOf(BarraSenhaLogin.getPassword())); 
+    /*a instanciação do objeto cliente teve uma modificação aqui, utilizei o ValuesOf para conseguir transformar char em string e utilizar o
+       getPassword */
+                
+     if (controlecliente.validarClienteController(cliente)){ 
+         /*
+         aqui foi utilizado um if para validar o usuário utilizando o método validarClienteController.
+         E caso após acessar a base de dados esteja correto o JOptionPane vai mostrar a mensagem de login feito com sucesso.
+         */
          JOptionPane.showMessageDialog(null, "Login feito com sucesso!");
          TelaPesquisa objeto1 = new TelaPesquisa();
          objeto1.setVisible(true);
      }else{
-         JOptionPane.showMessageDialog(null, "Usuário ou Senha incorretos!");
-     }
+         JOptionPane.showMessageDialog(null, "Usuário ou Senha incorretos!(Caso seja administrador, desconsiderar mensagem.)");
+     }      
+     // aqui o else padrão, caso contrário (não seja o login de administrador ou não tenha cadastro) vai mostrar Usuário e senha inválidos)
     }//GEN-LAST:event_btnAcessarActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
@@ -152,14 +163,6 @@ public class TelaLogin extends javax.swing.JFrame {
         TelaCadUsu1 objeto1 = new TelaCadUsu1(); //Criei uma instância que gera um objeto
         objeto1.setVisible(true);//Através do objeto solicitei abrir a TelaTipCad
     }//GEN-LAST:event_btnCadastrarActionPerformed
-
-    private void jbSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSairActionPerformed
-
-        System.exit(0);
-
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,7 +216,6 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JButton jbSair;
     // End of variables declaration//GEN-END:variables
 
 }
