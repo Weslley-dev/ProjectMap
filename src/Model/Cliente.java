@@ -9,6 +9,11 @@ package Model;
  *
  * @author beatr
  */
+
+/*
+    Aqui utilizamos o conceito de encapsulamento para os objetos.
+*/
+
 public class Cliente {
     
     private int usuId;

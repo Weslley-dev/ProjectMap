@@ -20,6 +20,12 @@ import java.sql.ResultSet;
  *
  * @author beatr
  */
+
+/*
+
+Utilizamos os mesmos conceitos do DAOCliente para o DAOEmpresa.
+
+*/
 public class DAOEmpresa extends ConexaoSQLite{
     
     public boolean salvarEmpresaDAO(Empresa pEmpresa) {

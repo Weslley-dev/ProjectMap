@@ -5,6 +5,9 @@
  */
 package Controle;
 
+/*
+*/
+
 import DAO.DAOProdutos;
 import Model.Produtos;
 import java.util.List;
@@ -24,7 +27,6 @@ public class ControleProdutos {
     public boolean salvarProdutosControle(Produtos modelProdutos) {
         return this.dAOProdutos.salvarProdutoDAO(modelProdutos);
     }
-
     public List<Produtos> getListaProdutosControle() {
         return this.dAOProdutos.getListaProdutosDAO();
     }

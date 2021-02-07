@@ -17,15 +17,20 @@ import java.util.List;
 import java.sql.ResultSet;
 
         
+
+
 /**
  *
  * @author beatr
  */
 public class DAOCliente extends ConexaoSQLite {
-    
+    /*
+    Aqui criamos a classe DAOCliente que herda a classe de conexão com o SQL.
+    */
     public boolean salvarUsuarioDAO(Cliente pCliente){
         conectar();
         //executar sql
+        // Criamos o método de salvar o usuário.
         String sql = "INSERT INTO tbl_cliente("
                 +"usu_nome, "
                 +"usu_email, "
@@ -50,6 +55,7 @@ public class DAOCliente extends ConexaoSQLite {
         return true;
     }
     
+    // Criamos um Arraylist para percorrer a tabela e apresentar os clientes.
     public List<Cliente> getListaClienteDAO(){
         List<Cliente> listaCliente = new ArrayList<>();
         Cliente modelCliente = new Cliente();
@@ -157,8 +163,8 @@ public class DAOCliente extends ConexaoSQLite {
     
     
     /*
-    aqui é onde crio a validação do cliente acessando os dados do MySQL
-    instanciando novamente o objeto cliente e conectando com a base de dados do SQL.
+    aqui é onde crio a validação do cliente acessando os dados do SQLite
+    instanciando novamente o objeto cliente e conectando com a base de dados do SQLite.
     
     */
     public boolean validarCliente(Cliente Cliente){
@@ -203,7 +209,7 @@ public class DAOCliente extends ConexaoSQLite {
             }
         }  
     }
-    // no fim foi um try e catch padrão para terminar a consulta.
+    // no fim foi um try e catch para tratar as exceções, padrão para terminar a consulta.
     
     public List<Cliente> readForNome(String nome){
         conectar();
@@ -211,6 +217,10 @@ public class DAOCliente extends ConexaoSQLite {
         ResultSet resultSet = null;
         PreparedStatement preparedStatement = null;
         List<Cliente> listaCliente = new ArrayList<>();
+        /*
+        Criamos a classe para pesquisa de clientes.
+        Utilizamos o Arraylist instanciando a classe Cliente.
+        */
         
         String sql = "SELECT pk_usu_id, "
                 +"usu_nome, "

@@ -303,6 +303,9 @@ public class MenuCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalvarClienteActionPerformed
 
     private void formularioUsuVazio(){
+        /*
+        Esse método identifica se os campos estão preenchidos para serem salvos.
+        */
         if((BarraNomeUsu1.getText().length() > 0) 
                 && (BarraCPFUsu.getText().length() > 0)
                 && (BarraEmailUsu.getText().length() > 0)
@@ -359,6 +362,9 @@ public class MenuCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPesquisaClienteActionPerformed
     
     private void pesquisarCliente(String nome){
+        /*
+        Esse método pesquisa o cliente a partir do nome.
+        */
         DefaultTableModel modelo2 = (DefaultTableModel) tblcliente.getModel();
         modelo2.setNumRows(0);
         DAOCliente pdao = new DAOCliente();

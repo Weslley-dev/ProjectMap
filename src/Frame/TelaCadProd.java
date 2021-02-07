@@ -331,6 +331,9 @@ public class TelaCadProd extends javax.swing.JFrame {
     }
     
     private void carregarProdutos(){
+        /*
+        Esse método carrega o produto na tabela.
+        */
         listaProdutos = controleProdutos.getListaProdutosControle();
         DefaultTableModel modelo4 = (DefaultTableModel) tblproduto.getModel();
         modelo4.setNumRows(0);
